@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ shop.locale }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Timeless Trails</title>
+    <title>About Us - {{ shop.name }}</title>
+    {{ content_for_header }}
     <style>
         body {
             font-family: 'Great Vibes', cursive;
@@ -30,10 +31,6 @@
 
         p {
             font-size: 24px;
-        }
-
-        #aboutContent {
-            margin: 40px;
         }
 
         /* Navigation menu styles */
@@ -70,8 +67,8 @@
 
         /* Button styles */
         #laughButton {
-            background-color: #ff9702;
-            color: #4daf50;
+            background-color: {{ 'Your Shopify Liquid Code for Button Background Color' }};
+            color: {{ 'Your Shopify Liquid Code for Button Text Color' }};
             font-size: 24px;
             padding: 10px 20px;
             border: none;
@@ -80,8 +77,8 @@
         }
 
         #laughButton:hover {
-            background-color: #4daf50;
-            color: #ff9702;
+            background-color: {{ 'Your Shopify Liquid Code for Button Hover Background Color' }};
+            color: {{ 'Your Shopify Liquid Code for Button Hover Text Color' }};
         }
 
         /* Animation */
@@ -93,31 +90,26 @@
                 transform: translateY(-10px);
             }
         }
-
     </style>
 </head>
 <body>
     <div id="header">
-        <h1>Timeless Trails</h1>
+        <h1>{{ shop.name }}</h1>
     </div>
 
     <div class="navbar">
-        <a href="#about">About Us</a>
-        <a href="#products">Products</a>
-        <a href="#contact">Contact</a>
+        <a href="{{ 'Your Shopify Liquid Code for About Us URL' }}">About Us</a>
+        <a href="{{ 'Your Shopify Liquid Code for Products URL' }}">Products</a>
+        <a href="{{ 'Your Shopify Liquid Code for Contact URL' }}">Contact</a>
     </div>
 
     <div id="aboutContent">
         <h2>About Timeless Trails</h2>
-        <p>Welcome to Timeless Trails, where nature's beauty is captured and illuminated in every candle. Our journey began with a passion for creating handcrafted candles that bring the serenity of the outdoors into your home.</p>
-
-        <p>At Timeless Trails, we believe in the art of candle making as a form of self-expression and connection with nature. Each candle is carefully crafted to reflect the beauty of the natural world, offering a unique and sensory experience for our customers.</p>
-
-        <p>Explore our collection of candles, each telling a story of tranquility and elegance. From soothing scents to aesthetically pleasing designs, our candles are designed to light up your life and create moments of joy and relaxation.</p>
+        <p>{{ 'Your Shopify Liquid Code for About Us Content' }}</p>
     </div>
 
     <footer>
-        <p>&copy; 2023 Timeless Trails. All rights reserved. | Designed by Your Name</p>
+        <p>&copy; {{ 'now' | date: "%Y" }} {{ shop.name }}. All rights reserved. | Designed by {{ 'Your Shopify Liquid Code for Designer Name' }}</p>
         <!-- Add additional footer content or links as needed -->
     </footer>
 
