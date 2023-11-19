@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Timeless Trails</title>
+    <style>
+        body {
+            font-family: 'Great Vibes', cursive;
+            background-color: #52307;
+            color: #ff9702;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        #header {
+            background-color: #4daf50;
+            color: #ff9702;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            width: 100%;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 24px;
+        }
+
+        #aboutContent {
+            margin: 40px;
+        }
+
+        /* Navigation menu styles */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #4daf50;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #ff9702;
+            padding: 20px;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #ff4502;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #4daf50;
+            color: #ff9702;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Button styles */
+        #laughButton {
+            background-color: #ff9702;
+            color: #4daf50;
+            font-size: 24px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        #laughButton:hover {
+            background-color: #4daf50;
+            color: #ff9702;
+        }
+
+        /* Animation */
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Timeless Trails</h1>
+    </div>
+
+    <div class="navbar">
+        <a href="#about">About Us</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div id="aboutContent">
+        <h2>About Timeless Trails</h2>
+        <p>Welcome to Timeless Trails, where nature's beauty is captured and illuminated in every candle. Our journey began with a passion for creating handcrafted candles that bring the serenity of the outdoors into your home.</p>
+
+        <p>At Timeless Trails, we believe in the art of candle making as a form of self-expression and connection with nature. Each candle is carefully crafted to reflect the beauty of the natural world, offering a unique and sensory experience for our customers.</p>
+
+        <p>Explore our collection of candles, each telling a story of tranquility and elegance. From soothing scents to aesthetically pleasing designs, our candles are designed to light up your life and create moments of joy and relaxation.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Timeless Trails. All rights reserved. | Designed by Your Name</p>
+        <!-- Add additional footer content or links as needed -->
+    </footer>
+
+    <script>
+        document.getElementById("laughButton").addEventListener("click", function() {
+            alert("Laughter is the best way to light up your day!");
+        });
+    </script>
+
+</body>
+</html>
