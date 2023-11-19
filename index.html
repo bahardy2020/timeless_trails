@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ shop.locale }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timeless Trails</title>
+    <title>{{ shop.name }} - Home</title>
+    {{ content_for_header }}
     <style>
         body {
             font-family: 'Great Vibes', cursive;
@@ -30,10 +31,6 @@
 
         p {
             font-size: 24px;
-        }
-
-        #aboutContent {
-            margin: 40px;
         }
 
         /* Navigation menu styles */
@@ -69,9 +66,9 @@
         }
 
         /* Button styles */
-        #laughButton {
-            background-color: #ff9702;
-            color: #4daf50;
+        .action-button {
+            background-color: {{ settings.button_background_color | default: '#ff9702' }};
+            color: {{ settings.button_text_color | default: '#4daf50' }};
             font-size: 24px;
             padding: 10px 20px;
             border: none;
@@ -79,9 +76,9 @@
             transition: background-color 0.3s, color 0.3s;
         }
 
-        #laughButton:hover {
-            background-color: #4daf50;
-            color: #ff9702;
+        .action-button:hover {
+            background-color: {{ settings.button_hover_background_color | default: '#4daf50' }};
+            color: {{ settings.button_hover_text_color | default: '#ff9702' }};
         }
 
         /* Animation */
@@ -97,27 +94,21 @@
 </head>
 <body>
     <div id="header">
-        <h1>Timeless Trails</h1>
+        <h1>{{ shop.name }}</h1>
     </div>
 
     <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="about-us.html">About Us</a>
-        <a href="#products">Products</a>
-        <a href="#contact">Contact</a>
+        <a href="{{ routes.home }}" class="nav-link">{{ 'Home' | t }}</a>
+        <a href="{{ routes.page.about }}" class="nav-link">{{ 'About Us' | t }}</a>
+        <!-- Add more navigation links as needed -->
     </div>
 
     <div id="aboutContent">
-        <h2>About Timeless Trails</h2>
-        <p>Welcome to Timeless Trails, Experience the soothing scents of nature with our collection of fragrances inspired by the great outdoors. All-natural soy wax with no additives, cotton wicks, and classic glass containers.</p>
-
-        <p>At Timeless Trails, we believe in the art of candle making as a form of self-expression and connection with nature. Each candle is carefully crafted to reflect the beauty of the natural world, offering a unique and sensory experience for our customers.</p>
-
-        <p>Explore our collection of candles, each telling a story of tranquility and elegance. From soothing scents to aesthetically pleasing designs, our candles are designed to light up your life and create moments of joy and relaxation.</p>
+        {{ content_for_layout }}
     </div>
 
     <footer>
-        <p>&copy; 2023 Timeless Trails. All rights reserved. | Designed by Your Name</p>
+        <p>&copy; {{ 'now' | date: "%Y" }} {{ shop.name }}. All rights reserved. | Designed by {{ settings.designer_name | default: 'Your Name' }}</p>
         <!-- Add additional footer content or links as needed -->
     </footer>
 
